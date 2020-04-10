@@ -29,6 +29,9 @@ public class Ball : MonoBehaviour
         if (!_renderer.isVisible)
         {
             GameManager.Instance.Balls--;
+            FindObjectOfType<AudioManager>().Play("BallLost");
+            Debug.Log("BallLost");
+
             Destroy(gameObject);
         }
     }

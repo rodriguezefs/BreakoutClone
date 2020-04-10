@@ -28,7 +28,7 @@ public class Brick : MonoBehaviour
     {
         hits--;
         // Score points
-
+        FindObjectOfType<AudioManager>().Play("BrickTouch");
         if (hits <= 0)
         {
             GameManager.Instance.Score += points;
